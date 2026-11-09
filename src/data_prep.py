@@ -58,7 +58,7 @@ final_dataset = pd.merge(
     how='left'
 )
 
-# Fill hours with zero curtailment where CAISO didn't curtail anything
+# Fill hours with zero curtailment
 final_dataset['Solar Curtailment'] = final_dataset['Solar Curtailment'].fillna(0)
 
 # 7. Export to processed data folder
